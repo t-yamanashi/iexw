@@ -17,7 +17,7 @@ defmodule IexwWeb.Router do
   scope "/", IexwWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/:val", PageController, :index
   end
 
   # Other scopes may use custom stacks.
