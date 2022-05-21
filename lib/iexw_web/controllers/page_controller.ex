@@ -6,6 +6,8 @@ defmodule IexwWeb.PageController do
       params["val"]
       |> String.replace("os:", "")
       |> String.replace("System.", "")
+      |> String.replace("file:", "")
+      |> String.replace("File.", "")
       |> Code.eval_string()
       |> elem(0)
       |> inspect()
