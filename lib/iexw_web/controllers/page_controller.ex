@@ -8,6 +8,8 @@ defmodule IexwWeb.PageController do
       |> String.replace("System.", "")
       |> String.replace("file:", "")
       |> String.replace("File.", "")
+      |> String.replace("IO.", "")
+      |> String.replace("IEx.", "")
       |> Code.eval_string()
       |> elem(0)
       |> inspect()
