@@ -12,7 +12,7 @@ defmodule IexwWeb.PageController do
       |> String.replace("IEx.", "")
       |> Code.eval_string()
       |> elem(0)
-      |> inspect()
+      |> inspect(limit: :infinity)
 
     render(conn, "index.html", val: val)
   end
