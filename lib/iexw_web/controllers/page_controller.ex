@@ -4,9 +4,9 @@ defmodule IexwWeb.PageController do
   def index(conn, params) do
     val =
       params["val"]
-      |> String.replace("os:", "")
+      |> String.replace(":os", "")
       |> String.replace("System.", "")
-      |> String.replace("file:", "")
+      |> String.replace(":file", "")
       |> String.replace("File.", "")
       |> String.replace("IO.", "")
       |> String.replace("Code.", "")
