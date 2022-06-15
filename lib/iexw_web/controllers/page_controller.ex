@@ -15,6 +15,7 @@ defmodule IexwWeb.PageController do
       |> String.replace("Mix.", "")
       |> String.replace("Eex.", "")
       |> String.replace(":mnesia","")
+      |> String.replace("Process.","")
       |> Code.eval_string()
       |> elem(0)
       |> inspect(limit: :infinity)
